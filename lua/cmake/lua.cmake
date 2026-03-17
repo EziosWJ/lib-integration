@@ -20,3 +20,16 @@ function(add_lua)
         target_include_directories(lua PUBLIC ${lua_SOURCE_DIR})
     endif()
 endfunction()
+
+function(add_lua_sol2)
+    include(FetchContent)
+
+    FetchContent_Declare(
+        sol2
+        GIT_REPOSITORY https://github.com/ThePhD/sol2.git
+        GIT_TAG v3.5.0
+    )
+
+    FetchContent_MakeAvailable(sol2)
+
+endfunction()

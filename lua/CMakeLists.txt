@@ -9,3 +9,8 @@ add_lua()
 
 # 链接Lua库到项目
 target_link_libraries(${PROJECT_NAME} PRIVATE lua)
+
+# 导入sol2库
+add_lua_sol2()
+add_executable(sol_use sol_use.cpp)
+target_link_libraries(sol_use PRIVATE lua sol2)

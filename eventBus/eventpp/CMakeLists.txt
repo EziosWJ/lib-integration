@@ -3,8 +3,10 @@ project(eventpp-starter VERSION 0.1.0 LANGUAGES C CXX)
 
 add_executable(eventpp-starter main.cpp)
 add_executable(eventpp-starter2 main2.cpp)
+add_executable(eventpp-starter3 main3.cpp)
 
 include(cmake/eventpp.cmake)
 
 target_link_libraries(eventpp-starter eventpp)
 target_link_libraries(eventpp-starter2 eventpp)
+target_link_libraries(eventpp-starter3 eventpp)
